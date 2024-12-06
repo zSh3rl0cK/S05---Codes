@@ -1,0 +1,157 @@
+:root {
+  --cor-sombra: #0a599b;
+  --cor-texto: black;
+  --cor-fundo: #edf2f4;
+  --cor-caixa: white;
+  --cor-header: blue;
+  --cor-aba: white;
+  --cor-icone: blue;
+  
+  
+}
+
+body {
+  margin: 0;
+  background-color: var(--cor-fundo);
+  font-family: "Arimo", sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  color: var(--cor-icone)
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor-header);
+  color: white;
+  padding: 10px;
+}
+
+#icone-esquerda, #icone-direita {
+  background-color: var(--cor-caixa);
+  padding: 10px;
+  color: var(--cor-icone);
+  cursor: pointer;
+}
+
+#logo {
+  width: 100px;
+  margin: 20px auto;
+}
+
+.svg_logo {
+  width: 100%;
+}
+
+.path_logo {
+  fill: white;
+}
+
+#container-caixas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+
+.caixa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--cor-caixa);
+  text-align: center;
+  color: var(--cor-texto);
+  transition: transform 0.2s;
+}
+
+.caixa:hover {
+  transform: scale(1.10);
+}
+
+.font {
+  font-size: 15px;
+  color: var(--cor-texto);
+}
+
+.click{
+  cursor: pointer;
+}
+
+#aba_lateral {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--cor-aba);
+  overflow-x: hidden;
+  transition: width 0.5s;
+  z-index: 1;
+  padding-top: 20px;
+}
+
+#aba_inversa {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--cor-aba);
+  overflow-x: hidden;
+  transition: width 0.5s;
+  z-index: 1;
+  padding-top: 20px;
+}
+
+#menu,#menu_perfil{
+  padding: 10px;
+  cursor: pointer;
+  color: var(--cor-texto);
+}
+
+#btn_popup{
+  color: var(--cor-icone);
+  cursor: pointer;
+}
+
+.popups{
+  display: none;
+  position: relative;
+  background-color: var(--cor-caixa);
+  color: var(--cor-texto);
+  padding: 20px;
+  margin: 15% auto;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 2;
+
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+}
+
+.titulo{
+  display: flex;
+  position: relative;
+  text-align: center;
+  padding: 15px;
+  color: var(--cor-icone);
+  
+  top: 8px;
+  right: 2px;
+  left: 2px;
+  font-size: 20px;
+  width: 70%;
+  max-width: 400px;
+}
